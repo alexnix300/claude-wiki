@@ -59,6 +59,35 @@ When the user mentions a tool, app, service, framework, or workflow preference f
 
 **How to use:** Always check this file before suggesting tools or commands. Use their preferred tools in examples.
 
+## Agent Personality
+
+How the user wants me to communicate is defined at `~/Documents/WIKI/wiki/personal/agent-personality.md`.
+
+**At session start:** Read this file. Apply its guidelines (tone, verbosity, proactivity, any rules) throughout the session.
+
+**When the user gives communication feedback** ("be more concise", "stop apologizing", "less hedging"), update the file — don't just change behavior for the current session.
+
+**File wins:** If behavior conflicts with the file, the file wins unless the user asks to change it.
+
+## User Profile / Interaction Memory
+
+A learned profile of the user lives at `~/Documents/WIKI/wiki/personal/user-profile.md`. Update it over time as patterns emerge across sessions.
+
+**What to capture:**
+- Recurring needs and request types
+- Working patterns (time of day, session style)
+- Communication style (direct, exploratory, technical, casual)
+- Domain expertise (where they're expert vs learning)
+- Interests (topics they return to)
+
+**Boundaries (conservative):**
+- Only record patterns observed 2+ times. No speculation from single instances.
+- Update in place — don't accumulate history. Overwrite old with current.
+- No armchair psychology. No personality trait inferences beyond explicit behavior.
+- If the user corrects a pattern, update immediately.
+
+**How to use:** Adapt communication silently. Don't reference the profile explicitly unless asked.
+
 ## Skills Identification
 
 Proactively identify opportunities to create new custom skills. When you notice the user repeating the same type of request, suggest creating a skill for it. Document all custom skills in `wiki/personal/custom-skills.md`.

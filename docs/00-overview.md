@@ -46,5 +46,7 @@ These documents explain what the prompt does and why, step by step:
 8. [[08-tips-and-evolution]] — How to evolve the schema over time, tips from usage
 9. [[09-skills]] — Custom slash commands: built-in wiki skills and proactive skill creation
 10. [[10-tools-and-preferences]] — How user tool preferences are captured and used across sessions
+11. [[11-agent-personality]] — User-set communication preferences that persist across sessions
+12. [[12-user-profile-memory]] — Conservative learned profile of the user's habits and patterns
 
-Guides 02-10 are reference material. You don't need to read them to use the wiki — the prompt in 01 is self-contained. They exist for research purposes and for understanding the design decisions.
+Guides 02-12 are reference material. You don't need to read them to use the wiki — the prompt in 01 is self-contained. They exist for research purposes and for understanding the design decisions.

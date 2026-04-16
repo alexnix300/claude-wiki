@@ -127,7 +127,55 @@ Also ask me during initial setup:
   communication, hosting, etc.)
 - Any strong preferences? (tabs vs spaces, dark mode, specific frameworks, etc.)
 
-### 6. Show me how to use it
+### 6. Ask me about agent personality
+
+Ask me 3 quick questions about how I want you to communicate:
+
+1. **Tone**: casual / professional / direct no-nonsense / other
+2. **Verbosity**: concise / balanced / detailed
+3. **Proactivity**: just do it / ask first / ask for anything non-obvious
+
+Save answers to `wiki/personal/agent-personality.md` with these sections:
+Tone, Verbosity, Proactivity, Additional guidelines.
+
+Going forward, whenever I give you feedback on communication style
+("be more concise", "stop apologizing", "no emoji", "less hedging"),
+add the rule to the "Additional guidelines" section so it persists across
+sessions. The file is a contract I've set for how you should behave — it
+wins over default behavior.
+
+Add instructions to the global `~/.claude/CLAUDE.md` to:
+- Read this file at every session start
+- Apply its guidelines throughout the session
+- Update it when I give communication feedback
+
+### 7. Set up user profile / interaction memory
+
+Create `wiki/personal/user-profile.md` with these empty sections:
+- Recurring needs (what I ask about most)
+- Working patterns (time of day, session style)
+- Communication style (direct, exploratory, technical, casual)
+- Domain expertise (where I'm expert vs learning)
+- Interests (topics I return to)
+
+Over time, fill this in silently based on patterns you observe across
+sessions. **Be conservative:**
+- Only record patterns observed **2+ times**
+- Update in place — overwrite, don't accumulate history
+- No speculation, no armchair psychology, no trait inferences beyond
+  observable behavior
+- If I correct you ("I don't usually..."), update immediately
+
+Use what you learn to adapt how you communicate with me — but don't
+reference the profile explicitly unless I ask. It should shape behavior
+silently.
+
+Add instructions to the global `~/.claude/CLAUDE.md` to:
+- Read this file at every session start to inform how to communicate with me
+- Update it conservatively as patterns emerge
+- Keep it factual and useful, not invasive
+
+### 8. Show me how to use it
 
 After setup, explain in plain language:
 - How to add a source (drop a file in raw/ and tell you to process it, or just

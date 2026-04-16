@@ -105,6 +105,15 @@ Claude remembers your preferred tools from first mention — editor, framework, 
 
 See [`docs/10-tools-and-preferences.md`](docs/10-tools-and-preferences.md) for details.
 
+## Agent personality & user profile
+
+Two additional layers shape how Claude communicates with you:
+
+- **Agent personality** (`wiki/personal/agent-personality.md`) — You configure how Claude should talk: tone, verbosity, proactivity. Setup asks 3 quick questions to seed it. Feedback ("be more concise", "stop apologizing") persists to this file, so you only say it once.
+- **User profile** (`wiki/personal/user-profile.md`) — A conservative, learned profile of your habits, needs, and communication style. Updated silently over time (2+ observations, no speculation). Claude uses it to adapt how it communicates with you — without ever calling attention to it.
+
+See [`docs/11-agent-personality.md`](docs/11-agent-personality.md) and [`docs/12-user-profile-memory.md`](docs/12-user-profile-memory.md).
+
 ## Documentation
 
 The [`docs/`](docs/) folder contains detailed guides explaining every aspect of the setup:
@@ -122,6 +131,8 @@ The [`docs/`](docs/) folder contains detailed guides explaining every aspect of 
 | [08-tips-and-evolution](docs/08-tips-and-evolution.md) | Usage tips and schema evolution |
 | [09-skills](docs/09-skills.md) | Slash commands and proactive skill creation |
 | [10-tools-and-preferences](docs/10-tools-and-preferences.md) | Tool preference tracking |
+| [11-agent-personality](docs/11-agent-personality.md) | User-set communication preferences that persist |
+| [12-user-profile-memory](docs/12-user-profile-memory.md) | Conservative learned profile of the user |
 
 ## Examples
 
