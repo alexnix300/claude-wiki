@@ -1,0 +1,7 @@
+.DS_Store
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.trash/
+
+# Never commit personal wiki content
+# This repo contains only templates and documentation
