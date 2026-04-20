@@ -26,7 +26,7 @@ Most LLM-document systems operate as retrieval: upload files, query them, receiv
 
 Three failure modes motivated this work.
 
-**RAG has no memory.** Conventional retrieval-augmented systems — NotebookLM, ChatGPT file uploads, vector-store chatbots — treat each query as independent. The model searches, synthesizes, and forgets. If a user asks a subtle question requiring cross-document synthesis, the model reconstructs that synthesis on demand and discards it after the session. The connections it found are not stored. The second identical question runs the same expensive synthesis again.
+**RAG has no memory.** Conventional retrieval-augmented systems — NotebookLM, ChatGPT file uploads, vector-store chatbots — treat each query as independent. The model searches, synthesizes, and forgets. If a user asks a subtle question requiring cross-document synthesis, the model reconstructs that synthesis on demand and discards it after the session. The connections it found are not stored. The second identical question runs the same expensive synthesis again. Karpathy observed the same thing from the practitioner side: *"I thought I had to reach for fancy RAG, but the LLM has been pretty good about auto-maintaining index files and brief summaries of all the documents"* [1]. The fix turned out to be structural, not algorithmic.
 
 **Human wikis collapse under maintenance.** Every knowledge base fails in the same way: the cost of keeping the graph consistent — updating cross-references, reconciling contradictions, pruning stale pages — grows faster than the value the graph produces. Humans abandon wikis not because wikis are bad, but because maintenance is boring and boredom scales with page count.
 
@@ -36,9 +36,9 @@ The opportunity, then, is to build a system in which the human owns curation, ex
 
 ## 2. Related work & lineage
 
-**Vannevar Bush (1945)** proposed the Memex — a personal, curated knowledge store with associative trails between documents. What Bush could not solve was the cost of building and maintaining those trails. Every ambitious personal-knowledge project since (Zettelkasten, Roam, Obsidian, TiddlyWiki) has been a partial instantiation of the Memex idea, hamstrung by that same maintenance problem.
+**Vannevar Bush (1945)** proposed the Memex [2] — a personal, curated knowledge store with associative trails between documents. What Bush could not solve was the cost of building and maintaining those trails. Every ambitious personal-knowledge project since (Zettelkasten, Roam, Obsidian, TiddlyWiki) has been a partial instantiation of the Memex idea, hamstrung by that same maintenance problem.
 
-**Andrej Karpathy's LLM Wiki methodology** is the direct inspiration for the present work. Karpathy's framing — that the LLM should write and maintain a persistent, compounding wiki, not just retrieve from raw documents — reframes the Memex as an LLM-native artifact. His outline describes three layers (raw sources, the wiki, a schema), three operations (ingest, query, lint), and the principle that the human's role is to curate and ask questions while the LLM does the bookkeeping.
+**Andrej Karpathy's "LLM Knowledge Bases"** post [1] is the direct inspiration for the present work. Karpathy describes a workflow in which source documents sit in a `raw/` directory and the LLM incrementally "compiles" them into a wiki — a tree of markdown files with summaries, concept articles, backlinks, and an auto-maintained index. Obsidian is the frontend; the LLM writes and maintains the wiki; the human rarely edits directly. Operations include ingest, Q&A against the wiki, rendering outputs (markdown, slides, charts) that can be filed back as pages, and periodic linting for consistency and missing data. At ~100 articles and ~400K words, Karpathy reports the index-first approach outperforms "fancy RAG" — a practitioner's anecdote that matches the theoretical argument in §1. His closing line — *"I think there is room here for an incredible new product instead of a hacky collection of scripts"* — frames the present work as a response: a reproducible, one-prompt implementation rather than a bespoke setup.
 
 **Obsidian and the Zettelkasten tradition** supply the frontend and the linking conventions. Obsidian's `[[wikilink]]` syntax, graph view, and plain-markdown storage make it an ideal viewer for an agent-maintained vault. The Zettelkasten principle of atomic, interlinked notes matches what an LLM produces naturally.
 
@@ -162,6 +162,12 @@ The key empirical observation is that **maintenance is the constraint**, and **L
 
 We expect many variations of this pattern. We encourage forks.
 
+## References
+
+[1] Karpathy, A. *LLM Knowledge Bases* [post]. X (@karpathy). https://x.com/karpathy/status/2039805659525644595
+
+[2] Bush, V. (1945). *As We May Think.* The Atlantic, July 1945. https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/
+
 ## See also
 
 - [[aoc-framework-paper]] — companion paper on prompt architecture (A.O.C. framework)
@@ -174,4 +180,4 @@ We expect many variations of this pattern. We encourage forks.
 
 ---
 
-*Citation:* Nix, A. (2026). *The Agentic Wiki: A Practitioner's Implementation of the LLM-Maintained Personal Knowledge Base.* Based on A. Karpathy's LLM Wiki methodology. https://github.com/alexnix300/claude-wiki
+*Citation:* Nix, A. (2026). *The Agentic Wiki: A Practitioner's Implementation of the LLM-Maintained Personal Knowledge Base.* Based on Karpathy's *LLM Knowledge Bases* [1]. https://github.com/alexnix300/claude-wiki
