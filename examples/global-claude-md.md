@@ -88,6 +88,17 @@ A learned profile of the user lives at `~/Documents/WIKI/wiki/personal/user-prof
 
 **How to use:** Adapt communication silently. Don't reference the profile explicitly unless asked.
 
+## Maintenance Principles
+
+Four behavior principles for wiki editing, adapted from Karpathy's LLM coding-pitfalls observations:
+
+1. **Read Before Edit** — Always read a page fully before editing. Before creating, check the index for a similar page. Never rely on memory about structure.
+2. **Minimal Page Surface** — Start pages with only the sections needed for content available now. No preparatory scaffolding.
+3. **Surgical Updates** — Edit only the sections that require change. Preserve existing structure. If a full rewrite is warranted, state it explicitly first.
+4. **Verify After Edit** — Frontmatter parses, wikilinks resolve, index updated if new page, log entry appended.
+
+Full doc with failure-mode examples: `wiki/meta/13-maintenance-principles.md`.
+
 ## Skills Identification
 
 Proactively identify opportunities to create new custom skills. When you notice the user repeating the same type of request, suggest creating a skill for it. Document all custom skills in `wiki/personal/custom-skills.md`.

@@ -50,3 +50,12 @@ Report findings organized by severity:
 - **Suggestions**: New pages, merges, investigation ideas
 
 Offer to fix issues automatically where possible. Ask before making changes.
+
+## Principles
+
+Apply the Maintenance Principles (see `wiki/meta/13-maintenance-principles.md`). Linting is itself the **Verify After Edit** principle at wiki-scale — it catches what per-edit verification missed.
+
+When fixing issues found during lint:
+- **Read Before Edit** — read each page before modifying it
+- **Surgical Updates** — fix only the specific issue; don't reformat the whole page
+- **Verify After Edit** — after fixes, re-run relevant lint checks to confirm resolution

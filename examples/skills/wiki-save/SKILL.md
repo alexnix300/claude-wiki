@@ -35,3 +35,12 @@ Save information to the personal wiki.
 - Ask the user to clarify if you're unsure where to file it.
 - Be concise — extract the essential info, don't pad.
 - If the input is vague ("save this for later"), ask what specifically to capture.
+
+## Principles
+
+Apply the Maintenance Principles (see `wiki/meta/13-maintenance-principles.md`):
+
+- **Read Before Edit** — if updating an existing page, read it fully first; don't assume its structure
+- **Minimal Page Surface** — if creating a new page, include only sections needed now; don't scaffold future content
+- **Surgical Updates** — touch only the section affected by this save; preserve the rest
+- **Verify After Edit** — frontmatter, wikilinks, index, log

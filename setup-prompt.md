@@ -107,6 +107,21 @@ Create these slash commands so I can use the wiki with simple one-word commands:
 Each skill should be a directory under `~/.claude/skills/` with a `SKILL.md`
 file containing the instructions you follow when the command is invoked.
 
+Every skill should reference four **Maintenance Principles** for wiki editing
+(put them in a `## Principles` section in each SKILL.md):
+
+1. **Read Before Edit** — Always read a page fully before editing; check the
+   index for similar pages before creating
+2. **Minimal Page Surface** — Start pages with minimum sections needed; no
+   preparatory scaffolding
+3. **Surgical Updates** — Edit only what needs changing; preserve existing
+   structure; state explicitly if a full rewrite is warranted
+4. **Verify After Edit** — Frontmatter parses, wikilinks resolve, index
+   updated if new page, log entry appended
+
+Same four principles go into the global `~/.claude/CLAUDE.md` as a section,
+so they apply to autonomous capture too — not just slash-command invocations.
+
 Also set up proactive skill identification: as we work together over time,
 notice when I repeat the same type of request and suggest creating a skill for
 it. Keep track of all custom skills in `wiki/personal/custom-skills.md`.

@@ -60,3 +60,12 @@ Detailed notes organized by theme.
 - Prefer specific claims over vague summaries.
 - Use `[[wikilinks]]` for every cross-reference.
 - If the source contradicts existing wiki content, flag it explicitly on both pages.
+
+## Principles
+
+Apply the Maintenance Principles (see `wiki/meta/13-maintenance-principles.md`):
+
+- **Read Before Edit** — read the source fully before summarizing; read each entity/concept/topic page before updating it
+- **Minimal Page Surface** — new entity pages should contain only what the source actually says, not a full template
+- **Surgical Updates** — update only the sections in existing pages that this source actually touches; don't restructure unrelated content
+- **Verify After Edit** — at end of ingest: confirm all new wikilinks resolve, frontmatter is valid, `wiki/index.md` lists new pages, `wiki/log.md` has an entry

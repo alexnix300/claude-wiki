@@ -48,5 +48,6 @@ These documents explain what the prompt does and why, step by step:
 10. [[10-tools-and-preferences]] — How user tool preferences are captured and used across sessions
 11. [[11-agent-personality]] — User-set communication preferences that persist across sessions
 12. [[12-user-profile-memory]] — Conservative learned profile of the user's habits and patterns
+13. [[13-maintenance-principles]] — Four behavior principles for wiki editing: Read Before Edit, Minimal Page Surface, Surgical Updates, Verify After Edit
 
-Guides 02-12 are reference material. You don't need to read them to use the wiki — the prompt in 01 is self-contained. They exist for research purposes and for understanding the design decisions.
+Guides 02-13 are reference material. You don't need to read them to use the wiki — the prompt in 01 is self-contained. They exist for research purposes and for understanding the design decisions.
