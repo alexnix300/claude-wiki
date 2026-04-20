@@ -1,6 +1,6 @@
 # Agentic Wiki — Claude Code Variant (Reference Implementation)
 
-Full feature parity with the Claude Wiki design. This is the **reference implementation** — everything in the open-source repo targets Claude Code first. The other `for-<agent>/` variants are translations, with known feature gaps documented in each.
+Full feature parity with the Agent Wiki design. This is the **reference implementation** — everything in the open-source repo targets Claude Code first. The other `for-<agent>/` variants are translations, with known feature gaps documented in each.
 
 ## Installation
 

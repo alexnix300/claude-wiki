@@ -28,7 +28,7 @@ Copy and paste this entire block into Claude Code:
 ````
 # Set up my personal wiki
 
-**Reference repo:** https://github.com/alexnix300/claude-wiki
+**Reference repo:** https://github.com/alexnix300/agent-wiki
 
 Before you begin, fetch the latest version of this repo. Read the `setup-prompt.md`,
 `README.md`, `docs/`, and `examples/` to get the most up-to-date structure,

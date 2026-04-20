@@ -1,4 +1,4 @@
-# Claude Wiki
+# Agent Wiki
 
 A personal knowledge base that builds itself. Paste one prompt into [Claude Code](https://claude.ai/claude-code), answer a few questions, and get a structured wiki that grows automatically with every session.
 
@@ -8,7 +8,7 @@ A personal knowledge base that builds itself. Paste one prompt into [Claude Code
 
 Most people's experience with LLMs and documents is **retrieval** — upload files, ask questions, get answers. The LLM rediscovers knowledge from scratch every time. Nothing accumulates.
 
-Claude Wiki is different. The LLM **builds and maintains a persistent wiki** — a structured collection of interlinked markdown files. When you add a source, the LLM reads it, extracts what matters, and integrates it into the existing wiki: updating entity pages, revising summaries, flagging contradictions, strengthening the synthesis. The knowledge compounds.
+Agent Wiki is different. The LLM **builds and maintains a persistent wiki** — a structured collection of interlinked markdown files. When you add a source, the LLM reads it, extracts what matters, and integrates it into the existing wiki: updating entity pages, revising summaries, flagging contradictions, strengthening the synthesis. The knowledge compounds.
 
 You browse the wiki in [Obsidian](https://obsidian.md). The LLM does all the writing. You direct the work.
 

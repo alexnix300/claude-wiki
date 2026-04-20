@@ -122,7 +122,7 @@ The three layers separate what the user *tells* the agent (personality), what th
 
 ## 8. Reference implementation
 
-The system is open source: **https://github.com/alexnix300/claude-wiki**. The repository includes:
+The system is open source: **https://github.com/alexnix300/agent-wiki**. The repository includes:
 
 - `setup-prompt.md` — a single prompt that, pasted into Claude Code, sets up the entire system: asks 6–8 plain-language questions, creates the vault with customized subdirectories, writes the schema, configures cross-session persistence, creates the five slash commands, seeds the personality and tools files, and explains usage.
 - `docs/` — 13 numbered guides explaining every design decision, from the seed prompt through workflows, skills, and personalization.
@@ -180,4 +180,4 @@ We expect many variations of this pattern. We encourage forks.
 
 ---
 
-*Citation:* Nix, A. (2026). *The Agentic Wiki: A Practitioner's Implementation of the LLM-Maintained Personal Knowledge Base.* Based on Karpathy's *LLM Knowledge Bases* [1]. https://github.com/alexnix300/claude-wiki
+*Citation:* Nix, A. (2026). *The Agentic Wiki: A Practitioner's Implementation of the LLM-Maintained Personal Knowledge Base.* Based on Karpathy's *LLM Knowledge Bases* [1]. https://github.com/alexnix300/agent-wiki

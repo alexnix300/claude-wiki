@@ -90,7 +90,7 @@ This is the kind of profile that emerges after 10-20 sessions, not after one.
 
 ## Privacy considerations
 
-The profile lives in the user's own wiki. It never leaves the local machine unless the user explicitly shares the wiki (e.g. pushing to a public git repo). The open-source repo `claude-wiki` ships with an empty template — no one else's profile data is ever published.
+The profile lives in the user's own wiki. It never leaves the local machine unless the user explicitly shares the wiki (e.g. pushing to a public git repo). The open-source repo `agent-wiki` ships with an empty template — no one else's profile data is ever published.
 
 For users who don't want this feature, it's opt-out: delete the file and the global config will gracefully skip it.
 

@@ -2,7 +2,7 @@
 
 > **Note:** This prompt targets Claude Code (the reference implementation). If you're using a different agent (Codex, OpenCode, Cursor, Aider, goose, Zed, Warp, Gemini CLI, etc.), see the repo's `examples/` folder — start with `examples/AGENTS.md` at your wiki vault root, then look at `examples/for-<your-agent>/` for slash-command or rule-format extensions. Known feature gaps per agent are documented in `examples/README.md`.
 
-**Reference repo:** https://github.com/alexnix300/claude-wiki
+**Reference repo:** https://github.com/alexnix300/agent-wiki
 
 Before you begin, fetch the latest version of this repo. Read the `setup-prompt.md`,
 `README.md`, `docs/`, and `examples/` to get the most up-to-date structure,
