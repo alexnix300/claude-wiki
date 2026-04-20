@@ -1,0 +1,101 @@
+---
+description: Agentic Wiki — LLM-maintained personal knowledge base in Obsidian
+alwaysApply: true
+---
+
+# Agentic Wiki Rules for Cursor
+
+You are maintaining a personal knowledge base — a structured, interlinked collection of markdown files that lives in this vault. The human curates sources and asks questions. You write, update, and cross-reference the wiki.
+
+## Vault layout
+
+- `raw/` — Immutable source documents. Read but never modify.
+- `raw/assets/` — Downloaded images and attachments.
+- `wiki/index.md` — Master catalog of all pages.
+- `wiki/log.md` — Append-only chronological log of operations.
+- `wiki/sources/` — One summary page per ingested source.
+- `wiki/entities/` — People, organizations, clients, systems.
+- `wiki/concepts/` — Ideas, frameworks, patterns.
+- `wiki/topics/` — Thematic synthesis across sources.
+- `wiki/analyses/` — Filed query results and investigations.
+- `wiki/projects/` — Project tracking.
+- `wiki/personal/` — Goals, routines, preferences.
+- `wiki/research/` — Technology exploration, paper drafts.
+- `wiki/meta/` — System documentation.
+
+## Page format
+
+Every wiki page uses YAML frontmatter + markdown with `[[wikilinks]]`:
+
+```markdown
+---
+type: source | entity | concept | topic | analysis | project | personal | research
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+tags: [relevant, tags]
+---
+
+# Page Title
+
+Content with [[wikilinks]] to other pages.
+```
+
+Every page must have at least one inbound link.
+
+## Core operations (respond to these user intents)
+
+When the user asks for any of these, execute the corresponding workflow:
+
+**"Ingest this"** (user drops a file in `raw/` or pastes content):
+1. Read the source fully
+2. Discuss 3-5 key takeaways with the user
+3. Write summary to `wiki/sources/`
+4. Create or update entity/concept/topic pages mentioned
+5. Add `[[wikilinks]]` across all touched pages
+6. Update `wiki/index.md`; append to `wiki/log.md`
+
+**"Answer this"** / "What do we know about X":
+1. Read `wiki/index.md` to find relevant pages
+2. Read those pages
+3. Synthesize an answer with `[[wikilinks]]` as citations
+4. Offer to file substantial answers as `wiki/analyses/` pages
+
+**"Lint the wiki"**:
+- Check for orphan pages, broken wikilinks, stale content, contradictions, missing pages, index-disk mismatches, unprocessed sources in `raw/`
+- Report by severity; fix with consent
+
+**"Save this"** (user provides info to file):
+1. Determine the right category
+2. Check `wiki/index.md` for existing similar page
+3. Update existing or create new (with proper frontmatter)
+4. Cross-link, update index and log
+
+**Autonomous capture** — during normal work, file noteworthy information (project decisions, new entities, research findings, personal context) into the wiki without being asked. Skip transient debugging or one-off fixes.
+
+## Maintenance principles
+
+Four rules that override defaults:
+
+1. **Read Before Edit** — Always read a page fully before editing. Before creating, check `wiki/index.md` for a similar page. Never assume structure from memory.
+2. **Minimal Page Surface** — Start pages with only the sections needed for content available now. No preparatory scaffolding. Empty sections invite padding.
+3. **Surgical Updates** — Edit only the section(s) that require change. Preserve existing structure. State a full rewrite explicitly before making one.
+4. **Verify After Edit** — Frontmatter parses, `[[wikilinks]]` resolve, `wiki/index.md` updated if new page, `wiki/log.md` appended.
+
+## Index and log conventions
+
+- `wiki/index.md`: one line per page, organized by type: `- [[Page Title]] — one-line summary`
+- `wiki/log.md`: append-only, each entry prefixed `## [YYYY-MM-DD] operation | Subject`
+
+## Style
+
+- Concise. Bullet points over prose.
+- Specific claims over vague summaries.
+- `[[wikilinks]]` for every cross-reference.
+- Flag contradictions between sources explicitly on both pages.
+
+## Cursor-specific notes
+
+- Cursor does not support true slash commands; use natural-language intents like "ingest this" or "save this to the wiki"
+- `alwaysApply: true` in this rule means it's active in every chat session in this project
+- For team-shared behavior, commit `.cursor/` to your repo
+- User-level rules (cross-project) must be configured via Cursor Settings → Rules (UI, not file-based)

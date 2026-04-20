@@ -12,6 +12,19 @@ Claude Wiki is different. The LLM **builds and maintains a persistent wiki** —
 
 You browse the wiki in [Obsidian](https://obsidian.md). The LLM does all the writing. You direct the work.
 
+## Works with
+
+Reference implementation targets Claude Code. Other supported agents via the `AGENTS.md` universal schema + agent-specific extensions:
+
+| Agent | Variant | Slash commands | Cross-session auto-load |
+|-------|---------|:-:|:-:|
+| **Claude Code** (reference) | [`examples/for-claude-code/`](examples/for-claude-code/) | ✅ skills | ✅ global config |
+| **OpenCode** | [`examples/for-opencode/`](examples/for-opencode/) | ✅ commands | ❌ per-project |
+| **Cursor** | [`examples/for-cursor/`](examples/for-cursor/) | ⚠️ manual intents | ❌ per-project |
+| **Codex, Aider, goose, Zed, Warp, Gemini CLI, Jules, Factory, others** | [`examples/AGENTS.md`](examples/AGENTS.md) at vault root | ❌ | ❌ per-project |
+
+See [`examples/README.md`](examples/README.md) for the full feature matrix and known limitations per agent.
+
 ## Quick start
 
 ### Prerequisites
