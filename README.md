@@ -2,6 +2,8 @@
 
 A personal knowledge base that builds itself. Paste one prompt into [Claude Code](https://claude.ai/claude-code), answer a few questions, and get a structured wiki that grows automatically with every session.
 
+> **Academic paper:** [`PAPER.md`](PAPER.md) — *The Agentic Wiki: A Practitioner's Implementation of the LLM-Maintained Personal Knowledge Base.* Full writeup of the architecture, cross-session persistence, adaptive personalization, failure modes, and open research questions. Based on Andrej Karpathy's LLM Wiki methodology.
+
 ## What is this?
 
 Most people's experience with LLMs and documents is **retrieval** — upload files, ask questions, get answers. The LLM rediscovers knowledge from scratch every time. Nothing accumulates.
